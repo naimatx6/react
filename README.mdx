@@ -1,0 +1,21 @@
+# Hello World React
+
+## To deploy the build to NGNIX web server
+
+```sh
+docker build -f dockerfile-nginx -t my-react-app:nginx .
+```
+
+```sh
+docker run -d -p 8080:80 --name my-react-app-nginx  my-react-app:nginx
+```
+
+## To run the app from nodejs
+
+```sh
+docker build -f dockerfile-react -t my-react-app:react .
+```
+
+```sh
+docker run -d -p 3080:3000 --name my-react-app-react  my-react-app:react
+```
